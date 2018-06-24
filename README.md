@@ -7,8 +7,8 @@ Library for working with GeoPosition fot TypeScript
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![codecov](https://codecov.io/gh/0xF6/geo-position.ts/branch/master/graph/badge.svg)](https://codecov.io/gh/0xF6/geo-position.ts)
 ![npm](https://img.shields.io/npm/dt/geo-position.ts.svg)
-    
- ### Install
+        
+### Install
 
 `yarn add geo-position.ts`
 
