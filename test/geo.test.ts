@@ -77,3 +77,31 @@ test("IsInsideArea", (t) => {
     t.true(new GeoPosition(71.436275, 55.220661).IsInsideArea(area));
     t.false(new GeoPosition(0, 0).IsInsideArea(area));
 });
+
+
+test("equals", (t) => {
+    t.plan(4);
+    let pos = new GeoPosition(71.317941, 55.691416);
+    t.true(pos.equals(pos));
+    t.false(pos.equals(new GeoPosition(70.317941, 54.691416)));
+    t.false(pos.equals(<GeoPosition><any>0));
+    t.false(pos.equals(undefined));
+});
+
+
+test("SectionCenterPosition", (t) => {
+    let pos = new GeoPosition(71.436706, 55.268108);
+    let pos2 = new GeoPosition(71.473202, 55.857764);
+    t.deepEqual(GeoPosition.SectionCenterPosition(pos, pos2), new GeoPosition(71.454954, 55.562936));
+});
+
+test("DistanceToSection", (t) => {
+    let pos = new GeoPosition(71.436706, 55.268108);
+    let pos2 = new GeoPosition(71.473202, 55.857764);
+    t.deepEqual(+GeoPosition.DistanceToSection(new GeoPosition(71.504361, 55.511926), pos, pos2).toFixed(2), 6497.15);
+});
+test("DistanceToSectionEx", (t) => {
+    let pos = new GeoPosition(71.436706, 55.268108);
+    let pos2 = new GeoPosition(71.473202, 55.857764);
+    t.deepEqual(+GeoPosition.DistanceToSectionEx(new GeoPosition(71.504361, 55.511926), pos, pos2).toFixed(2), 3331.33);
+});
