@@ -71,7 +71,7 @@ export class GeoPosition {
      * to string this object
      */
     public toString(): string {
-        return `[${this.Longitude} (λ), ${this.Latitude}] (φ)`
+        return `[${this.Longitude}(λ), ${this.Latitude}(φ)]`
     }
     /**
      * equals objects
