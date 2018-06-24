@@ -10,7 +10,7 @@ export class GeoPosition {
      * Lines of longitude appear vertical with varying curvature in this projection,
      * but are actually halves of great ellipses, with identical radii at a given latitude.
      */
-    public Longitude;
+    public Longitude: number;
     /**
      * Latitude (φ)
      * 
@@ -18,7 +18,7 @@ export class GeoPosition {
      * but are actually circular with different radii.
      * All locations with a given latitude are collectively referred to as a circle of latitude.
      */
-    public Latitude;
+    public Latitude: number;
 
     public constructor(_longitude?: number, _latitude?: number) {
         this.Longitude = _longitude || 0;
@@ -30,7 +30,7 @@ export class GeoPosition {
      */
     public Distance(pos: GeoPosition): number {
         // radius of the sphere (Earth)
-        var rad = 6372795;
+        var rad = 6399594;//6384000; //6372795; in meters 
 
         // coordinates of two points
         var llat1 = this.Latitude;
@@ -213,7 +213,7 @@ export class GeoPosition {
     public static GetGpsPosition(latitude: string, longitude: string) {
         switch (latitude[0]) {
             case 'N':
-                latitude = latitude.replace(longitude.substring(0, 1), "");
+                latitude = latitude.replace(latitude.substring(0, 1), "");
                 break;
             case 'S':
                 latitude = latitude.replace('S', '-');
@@ -232,6 +232,6 @@ export class GeoPosition {
             default:
                 throw new Error(`Invalid longitude specified: ${longitude}`);
         }
-        return new GeoPosition(parseFloat(longitude), parseFloat(latitude));
+        return new GeoPosition(parseFloat(longitude.replace(',', '.')), parseFloat(latitude.replace(',', '.')));
     }
 }
