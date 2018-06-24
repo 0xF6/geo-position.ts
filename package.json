@@ -1,0 +1,61 @@
+{
+  "name": "geo-position.ts",
+  "version": "1.0.0",
+  "description": "Library for working with GeoPosition fot TypeScript",
+  "main": "./lib/index.js",
+  "repository": "https://github.com/0xF6/geo-position.ts.git",
+  "author": "Yuuki Wesp <ls-micro@ya.ru>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^10.3.5",
+    "ava": "^1.0.0-beta.6",
+    "nyc": "^12.0.2",
+    "tap-nyan": "^1.1.0",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "linqable.ts": "^1.7.6"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "ava test/**/*.test.ts --verbose",
+    "test-nya": "ava test/**/*.test.ts --tap | tap-nyan",
+    "report-test": "yarn nyc --reporter=lcov --reporter=text-lcov ava test/**/*.test.ts"
+  },
+  "keywords": [
+    "geo",
+    "geo-position",
+    "position",
+    "distance",
+    "validate",
+    "gps"
+  ],
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "**/*.js",
+      "test"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text"
+    ],
+    "all": true,
+    "cache": true
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}

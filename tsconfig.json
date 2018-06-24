@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "es2015",
+        "lib": [
+            "es5",
+            "es6",
+            "dom"
+        ],
+        "module": "commonjs",
+        "removeComments": false,
+        "sourceMap": true,
+        "outDir": "lib/",
+        "declaration": true,
+        "moduleResolution": "node"
+    },
+    "filesGlob": [
+        "./src/**/*.ts",
+        "!node_modules/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "test",
+        "dist",
+        "build",
+        "index.d.ts",
+        "lib"
+    ],
+    "compileOnSave": true
+}
