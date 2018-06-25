@@ -42,7 +42,7 @@ new GeoPosition(71.317941, 55.691416);
 let xPoint = new GeoPosition(71.317941, 55.691416);
 let yPoint = new GeoPosition(71.500873, 55.807184);
 
-+x.Distance(y).toFixed(0) // -> 17304 meters
++x.Distance(y).toFixed(0) // -> 20844 meters
 ```
 
 #### Zero check
@@ -98,5 +98,5 @@ GeoPosition.SectionCenterPosition(pos, pos2) // GeoPosition(71.454954, 55.562936
 let start = new GeoPosition(71.436706, 55.268108);
 let end = new GeoPosition(71.473202, 55.857764);
 let point = new GeoPosition(71.504361, 55.511926);
-GeoPosition.SectionCenterPosition(point, start, end) // 3331 meters
+GeoPosition.SectionCenterPosition(point, start, end) // 5807 meters
 ```

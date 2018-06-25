@@ -20,7 +20,7 @@ export class GeoPosition {
      */
     public Latitude: number;
 
-    public constructor(_longitude?: number, _latitude?: number) {
+    public constructor(_latitude?: number, _longitude?: number) {
         this.Longitude = _longitude || 0;
         this.Latitude = _latitude || 0;
     }
@@ -71,7 +71,7 @@ export class GeoPosition {
      * to string this object
      */
     public toString(): string {
-        return `[${this.Longitude}(λ), ${this.Latitude}(φ)]`
+        return `[${this.Latitude}(φ), ${this.Longitude}(λ)]`
     }
     /**
      * equals objects
@@ -131,7 +131,7 @@ export class GeoPosition {
         max = Math.max(secStart.Latitude, secEnd.Latitude);
         latitude = min + (max - min) / 2;
 
-        return new GeoPosition(longitude, latitude);
+        return new GeoPosition(latitude, longitude);
     }
     /**
      * Calculates distance to section
@@ -174,8 +174,8 @@ export class GeoPosition {
             + (yy * (point.Latitude - secStart.Latitude)))
             / ((xx * xx) + (yy * yy));
 
-        var perp = new GeoPosition(secStart.Longitude + xx * shortestLength,
-            secStart.Latitude + yy * shortestLength);
+        var perp = new GeoPosition(
+            secStart.Latitude + yy * shortestLength, secStart.Longitude + xx * shortestLength);
 
         if (perp.Longitude < secEnd.Longitude && perp.Longitude > secStart.Longitude &&
             perp.Latitude < secEnd.Latitude && perp.Latitude > secStart.Latitude)
@@ -232,6 +232,6 @@ export class GeoPosition {
             default:
                 throw new Error(`Invalid longitude specified: ${longitude}`);
         }
-        return new GeoPosition(parseFloat(longitude.replace(',', '.')), parseFloat(latitude.replace(',', '.')));
+        return new GeoPosition(parseFloat(latitude.replace(',', '.')), parseFloat(longitude.replace(',', '.')));
     }
-}
+} 

@@ -12,7 +12,7 @@ test("Calculate distance", (t) => {
     let x = new GeoPosition(71.317941, 55.691416);
     let y = new GeoPosition(71.500873, 55.807184);
 
-    t.deepEqual(+x.Distance(y).toFixed(1), 17304.4);
+    t.deepEqual(+x.Distance(y).toFixed(1), 20844.1);
 })
 
 
@@ -54,11 +54,11 @@ test("Parse GPS", (t) => {
 });
 
 test("toString", (t) => {
-    t.deepEqual(new GeoPosition(71.317941, 55.691416).toString(), "[71.317941(λ), 55.691416(φ)]");
+    t.deepEqual(new GeoPosition(71.317941, 55.691416).toString(), "[71.317941(φ), 55.691416(λ)]");
 });
 
 test("hashCode", (t) => {
-    t.deepEqual(new GeoPosition(71.317941, 55.691416).hashCode(), 28334);
+    t.deepEqual(new GeoPosition(71.317941, 55.691416).hashCode(), 22042);
 });
 
 
@@ -98,10 +98,10 @@ test("SectionCenterPosition", (t) => {
 test("DistanceToSection", (t) => {
     let pos = new GeoPosition(71.436706, 55.268108);
     let pos2 = new GeoPosition(71.473202, 55.857764);
-    t.deepEqual(+GeoPosition.DistanceToSection(new GeoPosition(71.504361, 55.511926), pos, pos2).toFixed(2), 6497.15);
+    t.deepEqual(+GeoPosition.DistanceToSection(new GeoPosition(71.504361, 55.511926), pos, pos2).toFixed(2), 5807.64);
 });
 test("DistanceToSectionEx", (t) => {
     let pos = new GeoPosition(71.436706, 55.268108);
     let pos2 = new GeoPosition(71.473202, 55.857764);
-    t.deepEqual(+GeoPosition.DistanceToSectionEx(new GeoPosition(71.504361, 55.511926), pos, pos2).toFixed(2), 3331.33);
+    t.deepEqual(+GeoPosition.DistanceToSectionEx(new GeoPosition(71.504361, 55.511926), pos, pos2).toFixed(2), 5849.83);
 });
