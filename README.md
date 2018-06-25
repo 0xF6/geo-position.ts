@@ -32,8 +32,8 @@ import { GeoPosition } from 'geo-position.ts';
 
 new GeoPosition(71.317941, 55.691416);
 
-71.317941 //- Longitude (λ)
-55.691416 //- Latitude (φ)
+71.317941 //-  Latitude  (λ)
+55.691416 //-  Longitude (φ)
 
 ```
 
