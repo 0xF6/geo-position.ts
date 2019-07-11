@@ -1,6 +1,6 @@
 {
   "name": "geo-position.ts",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Library for working with GeoPosition fot TypeScript",
   "main": "./lib/index.js",
   "repository": "https://github.com/0xF6/geo-position.ts.git",
@@ -14,9 +14,6 @@
     "tap-nyan": "^1.1.0",
     "ts-node": "^7.0.0",
     "typescript": "^2.9.2"
-  },
-  "dependencies": {
-    "linqable.ts": "^1.7.6"
   },
   "scripts": {
     "build": "tsc",
@@ -57,5 +54,6 @@
     "require": [
       "ts-node/register"
     ]
-  }
+  },
+  "dependencies": {}
 }
