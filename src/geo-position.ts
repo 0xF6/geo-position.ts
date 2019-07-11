@@ -1,4 +1,3 @@
-import "linqable.ts";
 export class GeoPosition {
     /**
      * Zero value - ocean
@@ -101,7 +100,7 @@ export class GeoPosition {
         var point1_long;
         var point2_lat;
         var point2_long;
-        var n = area.Count();
+        var n = area.length;
 
         for (i = 0; i < n; i++) {
             point1_lat = area[i].Latitude - this.Latitude;
