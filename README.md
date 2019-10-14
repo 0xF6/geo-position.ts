@@ -42,7 +42,7 @@ new GeoPosition(71.317941, 55.691416);
 let xPoint = new GeoPosition(71.317941, 55.691416);
 let yPoint = new GeoPosition(71.500873, 55.807184);
 
-+x.Distance(y).toFixed(0) // -> 20844 meters
++xPoint.Distance(yPoint).toFixed(0) // -> 20844 meters
 ```
 
 #### Zero check
