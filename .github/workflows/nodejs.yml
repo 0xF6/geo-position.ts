@@ -10,9 +10,6 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12
-        registry-url: https://npm.pkg.github.com
-        scope: '@0xF6'
-      continue-on-error: true
     - name: npm install, build, and test
       run: |
         npm install
@@ -20,6 +17,5 @@ jobs:
         npm test
       env:
         CI: true
+    - run: echo "@0xF6:registry=https://npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
     - run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
