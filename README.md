@@ -1,12 +1,62 @@
-# geo-position.ts 🌎🛰  
-Library for working with GeoPosition fot TypeScript   
+<!-- Logo -->
+<p align="center">
+  <a href="#">
+    <img height="64" width="64" src="https://github.githubassets.com/images/icons/emoji/unicode/1f6f0.png">
+  </a>
+</p>
 
-[![Build Status](https://travis-ci.org/0xF6/geo-position.ts.svg?branch=master)](https://travis-ci.org/0xF6/geo-position.ts)
-[![Dev Dependencies](https://img.shields.io/david/dev/0xF6/geo-position.ts.svg)](https://david-dm.org/0xF6/geo-position.ts?type=dev)
-[![Dependencies](https://img.shields.io/david/0xF6/geo-position.ts.svg)](https://david-dm.org/0xF6/geo-position.ts)
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![codecov](https://codecov.io/gh/0xF6/geo-position.ts/branch/master/graph/badge.svg)](https://codecov.io/gh/0xF6/geo-position.ts)
-![npm](https://img.shields.io/npm/dt/geo-position.ts.svg)
+
+<!-- Name -->
+<h1 align="center">
+  geo-position.ts 🌎
+</h1>
+<!-- desc -->
+<h4 align="center">
+  Library for working with GeoPosition fot TypeScript   
+</h4>
+
+
+<!-- classic badges -->
+<p align="center">
+  <a href="https://travis-ci.org/0xF6/geo-position.ts">
+    <img alt="Build Status" src="https://travis-ci.org/0xF6/geo-position.ts.svg?branch=master">
+  </a>
+  <a href="https://david-dm.org/0xF6/geo-position.ts">
+    <img alt="Dependencies" src="https://img.shields.io/david/0xF6/geo-position.ts.svg">
+  </a>
+  <a href="https://codecov.io/gh/0xF6/geo-position.ts">
+    <img alt="CodeCov" src="https://codecov.io/gh/0xF6/geo-position.ts/branch/master/graph/badge.svg">
+  </a>
+  <a href="https://www.npmjs.com/package/geo-position.ts">
+    <img alt="npm" src="https://img.shields.io/npm/dt/geo-position.ts.svg">
+  </a>
+</p>
+
+<!-- popup badges -->
+<p align="center">
+  <a href="#">
+    <img src="http://img.shields.io/:license-MIT-blue.svg">
+  </a>
+  <a href="https://t.me/ivysola">
+    <img src="https://img.shields.io/badge/Ask%20Me-Anything-1f425f.svg?style=popout-square&logo=telegram">
+  </a>
+</p>
+
+
+
+
+
+
+<!-- big badges -->
+<p align="center">
+  <a href="#">
+    <img src="https://forthebadge.com/images/badges/contains-cat-gifs.svg">
+    <img src="https://forthebadge.com/images/badges/designed-in-ms-paint.svg">
+    <img src="https://forthebadge.com/images/badges/ages-18.svg">
+    <img src="https://ForTheBadge.com/images/badges/winter-is-coming.svg">
+    <img src="https://forthebadge.com/images/badges/made-with-javascript.svg">
+  </a>
+</p>
         
 ### Install
 
@@ -100,3 +150,10 @@ let end = new GeoPosition(71.473202, 55.857764);
 let point = new GeoPosition(71.504361, 55.511926);
 GeoPosition.SectionCenterPosition(point, start, end) // 5807 meters
 ```
+
+
+<p align="center">
+   <a href="https://ko-fi.com/P5P7YFY5">
+    <img src="https://www.ko-fi.com/img/githubbutton_sm.svg">
+  </a>
+</p>
