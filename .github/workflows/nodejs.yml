@@ -13,6 +13,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install --global yarn
+        yarn global add ava@2.4.0
         yarn build
         yarn test
       env:
