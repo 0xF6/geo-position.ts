@@ -15,14 +15,10 @@
   Library for working with GeoPosition fot TypeScript   
 </h4>
 
-
 <!-- classic badges -->
 <p align="center">
-  <a href="https://travis-ci.org/0xF6/geo-position.ts">
-    <img alt="Build Status" src="https://travis-ci.org/0xF6/geo-position.ts.svg?branch=master">
-  </a>
-  <a href="https://david-dm.org/0xF6/geo-position.ts">
-    <img alt="Dependencies" src="https://img.shields.io/david/0xF6/geo-position.ts.svg">
+  <a href="https://github.com/0xF6/geo-position.ts/actions/workflows/nodejs.yml">
+    <img alt="Build Status" src="https://github.com/0xF6/geo-position.ts/actions/workflows/nodejs.yml/badge.svg">
   </a>
   <a href="https://codecov.io/gh/0xF6/geo-position.ts">
     <img alt="CodeCov" src="https://codecov.io/gh/0xF6/geo-position.ts/branch/master/graph/badge.svg">
