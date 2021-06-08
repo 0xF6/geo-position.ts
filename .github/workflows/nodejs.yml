@@ -15,6 +15,7 @@ jobs:
         npm install --global yarn
         yarn global add ava@2.4.0
         yarn global add ts-node
+        yarn
         yarn build
         yarn test
       env:
